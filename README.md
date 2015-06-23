@@ -39,7 +39,8 @@ var users = accountdown(db, {
 
 var creds = {
     username: process.argv[2],
-    password: process.argv[3]
+    token: process.argv[3],
+    tokenSecret: proces.argv[4]
 };
 users.verify('oauth', creds, function (err, ok) {
     if (err) console.error(err)
